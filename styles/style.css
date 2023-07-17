@@ -57,7 +57,7 @@ body {
   position: absolute;
   width: 120%;
   height: 120%;
-  top: 0%;
+  top: -10%;
   left: -15%;
   background-size: cover;
   background-repeat: no-repeat;
