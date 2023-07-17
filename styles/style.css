@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+.parallax {
+  overflow: hidden;
+  background: linear-gradient(180deg, #F05053 0%, #FFFBD5 100%);
+}
+
+.parallax__wrap {
+  min-height: 100vh;
+  position: relative;
+
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.parallax__header {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 25%;
+  pointer-events: none;
+  
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+
+  transform: translateY(-50%) translateZ(500px) scale(0.5);
+  /* scale = 1 + (translateZ * -1) / perspective */
+}
+
+.parallax__title { 
+  font-size: 78px;
+  font-weight: 800;
+  line-height: 76px;
+}
+
+.parallax__subtitle {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.parallax__front {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: 0%;
+  left: -15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/front.png');
+
+  transform: translateZ(350px) scale(0.65);
+  /* scale = 1 + (translateZ * -1) / perspective */
+
+}
+
+.parallax__middle {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/middle.png');
+
+  transform: translateZ(200px) scale(0.8);
+  /* scale = 1 + (translateZ * -1) / perspective */
+}
+
+.parallax__back {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -10%;
+  left: 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/back.png');
+
+  transform: translateZ(50px) scale(0.95);
+  /* scale = 1 + (translateZ * -1) / perspective */
+}
