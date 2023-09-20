@@ -1,7 +1,6 @@
 "use strict"
 
-const item = document.querySelector('.parallax__wrap');
-
+const item = document.querySelector('.parallax');
 const SPEED = 0.015;
 
 function onCardMove (evt) {
@@ -17,4 +16,3 @@ function onCardOut () {
 
 item.addEventListener('mousemove', onCardMove);
 item.addEventListener('mouseout', onCardOut);
-
